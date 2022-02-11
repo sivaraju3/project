@@ -2,19 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('code validation') {
+        stage('Build') {
             steps {
-                echo 'validating..'
-                sh 'mvn validate'
+                echo 'Building..'
             }
         }
-
-    stages {
-        stage('unit test') {
+        stage('Test') {
             steps {
-                echo 'testing..'
-                sh 'mnv test'
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
-} 
+}
