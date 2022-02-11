@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('valiate') {
             steps {
-                echo 'Building..'
+                echo 'validating..'
+                sh 'mvn validate'
             }
         }
         stage('Test') {
