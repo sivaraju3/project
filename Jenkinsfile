@@ -14,6 +14,10 @@ pipeline {
                 sh 'mvn test'
             }
         }
-
+        stage('build') {
+            steps {
+                echo 'building..'
+                sh 'mvn package'
+        
     }
 }
